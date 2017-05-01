@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FE4041;
+  color: #fff;
+}
+
+.row {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.controls {
+  text-align: center;
+}
