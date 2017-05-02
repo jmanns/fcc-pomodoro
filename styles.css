@@ -62,7 +62,7 @@ h1 {
   border: 2px solid #fff;
   color: #fff;
   cursor: pointer;
-  transition: background .2s ease, transform .2s ease;
+  transition: background .2s ease, transform .2s ease, box-shadow .3s ease;
   font-size: 32px;
   line-height: 1;
   outline: none;
@@ -92,13 +92,14 @@ h1 {
 }
 
 .start-btn:active, .stop-btn:active {
-  transform: scale(1.05);
-  box-shadow: 3px 3px 5px black;
+  transform: scale(.97);
+  box-shadow: none;
 }
 
 .start-btn, .stop-btn {
   border: 1px solid #fff;
   padding: 15px 30px;
+  box-shadow: 6px 6px 5px #a70d0d;
 }
 
 .session-time, .break-time {
