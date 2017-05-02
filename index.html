@@ -3,7 +3,9 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link href="grid.css" rel=stylesheet type="text/css" />
+    <link href="vendors/css/grid.css" rel=stylesheet type="text/css" />
+    <link href="vendors/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="styles.css" rel="stylesheet" type="text/css" />
     <title>Pomodoro Clock</title>
   </head>
@@ -12,12 +14,29 @@
     <main>
       <div class="row">
         <div class="col span-1-of-2 controls">
-          <h2>Session</h2>
+          <h3>Work</h3>
+          <p><i class="ion-arrow-up-c icon-border inc-s"></i> <span class="session-time">25</span> <i class="ion-arrow-down-c icon-border dec-s"></i></p>
         </div>
         <div class="col span-1-of-2 controls">
-          <h2>Break</h2>
+          <h3>Break</h3>
+          <p><i class="ion-arrow-up-c icon-border inc-b"></i> <span class="break-time">5</span> <i class="ion-arrow-down-c icon-border dec-b"></i></p>
         </div>
       </div>
+      
+      <div class="row">
+        <h1>Pomodoro</h1>
+        <div class="timer">
+          <h2 class="time">00:00</h2>
+        </div>
+      </div>
+      
+      <div class="row">
+        <i class="ion-play icon-border start-btn"></i>
+        <i class="ion-stop icon-border stop-btn"></i>
+      </div>
     </main>
+    
+    <audio src="buzzer.wav"></audio>
+    <script src="app.js"></script>
   </body>
 </html>

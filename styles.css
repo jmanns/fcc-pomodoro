@@ -9,11 +9,58 @@ body {
   color: #fff;
 }
 
+h1 {
+  margin: 20px;
+}
+
 .row {
-  max-width: 880px;
+  max-width: 800px;
   margin: 0 auto;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .controls {
-  text-align: center;
+  user-select: none;
+}
+
+.timer {
+  border: 2px solid #fff;
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.time {
+  line-height: 290px;
+  font-family: 'Pacifico', cursive;
+  font-size: 4.5rem;
+}
+
+button {
+  padding: 10px;
+}
+
+i {
+  cursor: pointer;
+}
+
+.icon-border {
+  font-size: 20px;
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 10px;
+  width: 50px;
+}
+
+.session-time, .break-time {
+  display: inline-block;
+  margin: 0 10px;
+  width: 20px;
+}
+
+.stop-btn {
+  display: none;
 }
