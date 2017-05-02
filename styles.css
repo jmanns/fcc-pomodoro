@@ -7,6 +7,7 @@
 body {
   background-color: #FE4041;
   color: #fff;
+  font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
@@ -18,6 +19,24 @@ h1 {
   margin: 0 auto;
   text-align: center;
   margin-bottom: 50px;
+}
+
+.row:first-of-type {
+  margin-top: 100px;
+}
+
+@media screen  and (max-width: 480px) {
+  .row {
+    margin-bottom: 30px;
+  }
+  
+  .row:first-of-type {
+    margin-top: 50px;
+  }
+  
+  .col {
+    margin-bottom: 40px;
+  }
 }
 
 .controls {
@@ -38,29 +57,58 @@ h1 {
   font-size: 4.5rem;
 }
 
-button {
-  padding: 10px;
-}
-
-i {
+.button {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
   cursor: pointer;
+  transition: background .2s ease, transform .2s ease;
+  font-size: 32px;
+  line-height: 1;
+  outline: none;
 }
 
-.icon-border {
-  font-size: 20px;
-  display: inline-block;
-  border: 1px solid #fff;
+.button-round {
+  padding: 0 .75rem;
+  margin: 0 .75rem;
+  height: 3.5rem;
+  width: 3.5rem;
   border-radius: 50%;
-  padding: 10px;
-  width: 50px;
-}
-
-.session-time, .break-time {
-  display: inline-block;
-  margin: 0 10px;
-  width: 20px;
 }
 
 .stop-btn {
   display: none;
+}
+
+.controls .button:hover {
+  background: #fff;
+  color: #FE4041;
+}
+
+.controls .button:active {
+  background: #fff;
+  color: #FE4041;
+  transform: scale(1.05);
+}
+
+.start-btn:active, .stop-btn:active {
+  transform: scale(1.1);
+  box-shadow: 3px 3px 5px black;
+}
+
+.start-btn, .stop-btn {
+  border: 1px solid #fff;
+  padding: 15px 30px;
+}
+
+.session-time, .break-time {
+  display: inline-block;
+  text-align: center;
+  font-size: 2rem;
+  width: 36px;
+}
+
+.icon-large {
+  cursor: pointer;
+  font-size: 6rem;
 }

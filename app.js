@@ -5,6 +5,7 @@ var sessionTimeEl = document.querySelector('.session-time')
 var breakTimeEl = document.querySelector('.break-time')
 var startButton = document.querySelector('.start-btn')
 var stopButton = document.querySelector('.stop-btn')
+var heading = document.querySelector('h1')
 var inProgress = false;
 var sessionInterval, breakInterval
 
@@ -63,7 +64,7 @@ startButton.addEventListener('click', function (e) {
   this.style.display = 'none'
   stopButton.style.display = 'inline-block'
   inProgress = true
-  
+  heading.innerText = 'Work'
   startSessionTimer()
 })
 
@@ -76,6 +77,7 @@ function startSessionTimer () {
     } else {
       playBuzzer()
       clearInterval(sessionInterval)
+      heading.innerText = 'Break'
       startBreakTimer()
     }
   }, 1000)
@@ -92,6 +94,7 @@ function startBreakTimer () {
       clearInterval(breakTimeSeconds)
       updateTimer()
       inProgress = false;
+      heading.innerText = 'Pomodoro'
     }
   }, 1000)
 }
@@ -99,6 +102,7 @@ function startBreakTimer () {
 stopButton.addEventListener('click', function (e) {
   this.style.display = 'none'
   startButton.style.display = 'inline-block'
+  heading.innerText = 'Pomodoro'
   // end the session
   clearInterval(sessionInterval)
   clearInterval(breakInterval)
