@@ -88,11 +88,11 @@ h1 {
 .controls .button:active {
   background: #fff;
   color: #FE4041;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .start-btn:active, .stop-btn:active {
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: 3px 3px 5px black;
 }
 
